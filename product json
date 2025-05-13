@@ -1,0 +1,30 @@
+[
+  {
+    "image": "dress-1.jpg",
+    "title": "Serenity Nightdress",
+    "desc": "Dress motif bunga dengan bahan katun sutra premium, nyaman dipakai sepanjang malam",
+    "price": "Rp 289.000",
+    "colors": ["Merah", "Hitam", "Dusty Pink"]
+  },
+  {
+    "image": "dress-2.jpg",
+    "title": "Moonlight Elegance",
+    "desc": "Desain geometris modern dengan pinggiran emas 24k, bahan velvet mewah",
+    "price": "Rp 319.000",
+    "colors": ["Navy", "Emerald Green", "Charcoal"]
+  },
+  {
+    "image": "dress-3.jpg",
+    "title": "Royal Velvet",
+    "desc": "Kombinasi velvet dan satin dengan paduan warna eksklusif, limited edition",
+    "price": "Rp 349.000",
+    "colors": ["Burgundy", "Royal Blue", "Gold"]
+  },
+  {
+    "image": "dress-4.jpg",
+    "title": "Midnight Whisper",
+    "desc": "Desain flowy dengan material chiffon premium dan detail payette",
+    "price": "Rp 279.000",
+    "colors": ["Black", "Dark Purple", "Slate Gray"]
+  }
+]
