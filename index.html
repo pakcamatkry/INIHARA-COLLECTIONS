@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="INIHARA COLLECTION - Luxury Night Dresses with Exclusive Motifs">
+  <title>INIHARA COLLECTION | Luxury Nightwear</title>
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="style.css" as="style">
+  <link rel="preload" href="script.js" as="script">
+  <link rel="preload" href="products.json" as="fetch" crossorigin>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "INIHARA COLLECTION",
+    "description": "Luxury night dresses with exclusive motifs",
+    "image": "images/logo-inihara.png",
+    "telephone": "+6288258182989",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Jakarta",
+      "addressCountry": "ID"
+    }
+  }
+  </script>
+</head>
+<body>
+  <!-- Preloader -->
+  <div class="preloader" aria-hidden="true">
+    <div class="gold-spinner"></div>
+  </div>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="#" class="wa-float" id="waFloat" aria-label="Chat via WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Header -->
+  <header>
+    <div class="logo-container">
+      <img src="images/logo-inihara.png" alt="INIHARA COLLECTION Logo" class="logo" width="120" height="120">
+    </div>
+    <h1>INIHARA <span>COLLECTION</span></h1>
+    <p class="tagline">Luxury Nightwear • Exclusive Motifs</p>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Carousel Section -->
+    <section class="carousel-section" aria-labelledby="products-heading">
+      <h2 id="products-heading" class="section-title"><span>✦</span> OUR SIGNATURE DRESSES <span>✦</span></h2>
+      
+      <div class="carousel-container">
+        <div class="carousel-track" id="carousel-track" aria-live="polite">
+          <!-- Slides will be injected by JavaScript -->
+        </div>
+        
+        <button class="carousel-btn prev" aria-label="Previous product">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="carousel-btn next" aria-label="Next product">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+        
+        <div class="carousel-dots" id="carousel-dots" role="tablist">
+          <!-- Dots will be injected by JavaScript -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Product Popup -->
+  <div class="product-popup" id="productPopup" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+    <div class="popup-content">
+      <button class="close-popup" aria-label="Close product details">&times;</button>
+      <img id="popupImage" src="" alt="" loading="lazy">
+      <div class="product-info">
+        <h3 id="popupTitle">Product Name</h3>
+        <p id="popupDesc">Product description</p>
+        <p class="price" id="popupPrice">Rp 0</p>
+        <a href="#" class="whatsapp-btn" id="whatsappBtn" aria-label="Order this product via WhatsApp">
+          <i class="fab fa-whatsapp"></i> Pesan Sekarang
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; <span id="currentYear"></span> INIHARA COLLECTION. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js" defer></script>
+  
+  <!-- Inline script for critical initializations -->
+  <script>
+    // Set current year in footer
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    
+    // Preload important images
+    const preloadImages = ['logo-inihara.png', 'dress-1.jpg', 'dress-2.jpg', 'dress-3.jpg'];
+    preloadImages.forEach(img => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = `images/${img}`;
+      link.as = 'image';
+      document.head.appendChild(link);
+    });
+  </script>
+</body>
+</html>
